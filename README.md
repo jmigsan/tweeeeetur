@@ -1,2 +1,2 @@
 # twutter
-microblogging website clone
+microblogging website

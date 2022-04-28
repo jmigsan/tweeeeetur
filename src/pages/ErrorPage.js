@@ -1,6 +1,8 @@
 function ErrorPage() {
   return (
-    <div>404</div>
+    <div>
+      <h2>404</h2>
+    </div>
   )
 }
 

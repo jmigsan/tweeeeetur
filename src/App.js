@@ -8,8 +8,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <h1><span>tweeeeetur. | <Link to="/">Home</Link> | <Link to="/about">About</Link></span></h1>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,6 +1,4 @@
-import React from 'react'
-
-function TwootForm() {
+const TwootForm = () => {
   return (
     <div>
       <form action="/">

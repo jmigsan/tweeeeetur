@@ -3,7 +3,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
 
-function App() {
+const App = () => {
+
+  
+
   return (
     <div className="App">
       <BrowserRouter>

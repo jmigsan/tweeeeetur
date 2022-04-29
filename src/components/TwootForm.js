@@ -1,17 +1,36 @@
+import { useState } from "react";
+
 const TwootForm = () => {
+
+  const [twoother, setTwoother] = useState("John Twutter");
+  const [twootxt, setTwootxt] = useState("");
+
   return (
     <div>
       <form action="/">
-        <label for="fname">name: </label> <br />
-        <input type="text" id="fname" name="fname" defaultValue="John Twutter"/>
-        <br />
-        <br />
+        <label for="name">name: </label> <br />
+        
+        <input
+          type="text"
+          value={twoother}
+          onChange = {e => setTwoother(e.target.value)}
+        />
+        
+        <br /><br />
+
         <label for="msg">twoot: </label>
+        
         <br />
-        <textarea type="text" id="msg" name="msg" defaultValue=""/>
-        <br />
-        <br />
-        <input type="submit" value="Submit"/>
+
+        <textarea
+          type="text" 
+          value={twootxt}
+          onChange = {e => setTwootxt(e.target.value)}
+        />
+
+        <br /><br />
+
+        <input type="submit" value="twoot it"/>
       </form>
     </div>
   )

@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
-import { useState } from 'react';
+
+import './App.css';
 
 const App = () => {
 
@@ -23,7 +26,7 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <nav>
-          <h1><span>tweeeeetur. | <Link to="/">Home</Link> | <Link to="/about">About</Link></span></h1>
+          <h1 className="title"><span>tweeeeetur. | <Link to="/">Home</Link> | <Link to="/about">About</Link></span></h1>
         </nav>
         <Routes>
           <Route path="/" element={ <Home twootabase = { twootabase } /> } />

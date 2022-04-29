@@ -1,10 +1,12 @@
 import TwootForm from "../components/TwootForm"
+import ViewTwoots from "../components/ViewTwoots"
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <h3>Home</h3>
       <TwootForm />
+      <ViewTwoots />
     </div>
   )
 }

@@ -1,11 +1,10 @@
+import Twoot from "./Twoot"
+
 const ViewTwoots = ( {twootabase} ) => {
   return (
     <div>
-      { twootabase.map (twoot => 
-        <div>
-          <h3>{twoot.author}</h3>
-          <p>{twoot.content}</p>
-        </div>  
+      { twootabase.map (twoot =>
+        <Twoot twootData={twoot} />
       )}
     </div>
   )

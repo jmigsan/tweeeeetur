@@ -1,0 +1,30 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.twoot {
+  border-radius: 25px;
+  background: #cd60ff;
+  padding: 1em;
+  padding-top: 0.3em;
+  margin: 1em;
+  margin-left: 0em; 
+  width: 40em;
+  color: white;
+}
+  
+.title {
+  font-size: 1.5em;
+  margin-top: 0;
+  padding-bottom: 0.4em;
+}
+
+a {
+  text-decoration: none;
+  color: #cd60ff;
+}

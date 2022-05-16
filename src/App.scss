@@ -51,7 +51,7 @@ body {
 .title {
   @include titleMainMarginPadding;
   $randomNumber: random();
-  font-size: (1em + 0.5em) + $randomNumber;
+  font-size: (0.8em + 0.8em) + $randomNumber - $randomNumber;
 }
 
 a {
@@ -64,4 +64,59 @@ a {
   display: block;
   max-width:300px;
   max-height:300px;
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 2em;
+  }
+  
+  .input-grid {
+    display: grid;
+    grid-template-columns: 7.5em 12em;
+  }
+  
+  .twoot {
+    border-radius: 25px;
+    background: $coolPurple;
+    padding: 1em;
+    padding-top: 0.3em;
+    margin: 1em;
+    width: 250px;
+    color: complement($highlightColour);
+  
+    h3 {
+      color: $textColour;
+    }
+  
+    p {
+      color: $textColour;
+    }
+    
+  }
+  
+  @mixin titleMainMarginPadding {
+    margin-top: 0;
+    padding-bottom: 0.4em;
+  }
+  
+  
+    
+  .title {
+    @include titleMainMarginPadding;
+    font-size: 1.2em;
+  }
+  
+  .twootimg
+  {
+    display: block;
+    max-width:200px;
+    max-height:200px;
+  }
 }

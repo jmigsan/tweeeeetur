@@ -76,18 +76,26 @@ const ViewTwootsFirestore = () => {
               </div>
             )
           }
-          
-          if (twootimagePath !== "https://firebasestorage.googleapis.com/v0/b/tweeeeetur-a362e.appspot.com/o/twootimages%2Fundefined?alt=media") {
+
+          if (twootimagePath === "https://firebasestorage.googleapis.com/v0/b/tweeeeetur-a362e.appspot.com/o/twootimages%2F?alt=media") {
             return (
               <div className="twoot" key={twoot.twootId}>
                 <h3>{twoot.twoothor}</h3>
                 <p>{twoot.twootxt}</p>
                 <p>{`${twootimeLocal.toLocaleDateString()}, ${twootimeLocal.toLocaleTimeString()}`}</p>
-                <img className="twootimg" src={twootimagePath} alt="twoot image" />
               </div>
             )
           }
           
+          return (
+            <div className="twoot" key={twoot.twootId}>
+              <h3>{twoot.twoothor}</h3>
+              <p>{twoot.twootxt}</p>
+              <p>{`${twootimeLocal.toLocaleDateString()}, ${twootimeLocal.toLocaleTimeString()}`}</p>
+              <img className="twootimg" src={twootimagePath} alt="twoot image" />
+            </div>
+          )
+
         })
       }
     </div>

@@ -29,12 +29,15 @@ const About = () => {
         <h1>About {user.displayName}, not us.</h1>
         <p>{user.email}</p>
         <img src={user.photoURL} alt="user profile" />
+        <h1>About us</h1>
+        <p>tweeeeetur is a microblogging website.</p>
       </div>
     )
   } else {
     return (
       <div>
-        <h1>About</h1>
+        <h1>About us</h1>
+        <p>tweeeeetur is a microblogging website.</p>
       </div>
     )
   }

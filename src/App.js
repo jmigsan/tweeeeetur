@@ -14,11 +14,11 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <nav>
-          <h1 className="title"><span>tweeeeetur. | <Link to="/">Home</Link> | <Link to="/rtdb">Mini</Link> | <Link to="/lite">Lite</Link> | <Link to="/about">About</Link></span></h1>
+          <h1 className="title"><span>tweeeeetur. | <Link to="/">Home</Link> | <Link to="/mini">Mini</Link> | <Link to="/lite">Lite</Link> | <Link to="/about">About</Link></span></h1>
         </nav>
         <Routes>
           <Route path="/" element={ <FirebaseHome /> } />
-          <Route path="/rtdb" element={ <RTDBHome /> } />
+          <Route path="/mini" element={ <RTDBHome /> } />
           <Route path="/lite" element={ <Lite /> } />
           <Route path="/about" element={ <About /> } />
           <Route path="*" element={ <ErrorPage /> } /> 

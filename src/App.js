@@ -14,7 +14,7 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <nav>
-          <h1 className="title"><span>tweeeeetur. | <Link to="/">Coke enjoyers</Link> | <Link to="/rtdb">Pepsi fans</Link> | <Link to="/lite">Lite</Link> | <Link to="/about">About</Link></span></h1>
+          <h1 className="title"><span>tweeeeetur. | <Link to="/">Home</Link> | <Link to="/rtdb">Mini</Link> | <Link to="/lite">Lite</Link> | <Link to="/about">About</Link></span></h1>
         </nav>
         <Routes>
           <Route path="/" element={ <FirebaseHome /> } />

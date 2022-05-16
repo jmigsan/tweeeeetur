@@ -1,37 +1,25 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { useState } from 'react';
 
-import Home from './pages/Home';
 import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
+import Lite from './pages/Lite';
+import FirebaseHome from './pages/FirebaseHome';
+import RTDBHome from './pages/RTDBHome';
 
-import './App.css';
+import './App.scss';
 
 const App = () => {
-
-  const [twootabase, setTwootabase] = useState([
-    {
-      "twoothor": "John",
-      "twootxt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      "twoothor": "Jane",
-      "twootxt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi arcu dolor, auctor eget nulla vitae, commodo ultricies purus. Phasellus egestas at odio eget dictum. Sed efficitur tortor ac pharetra bibendum. Vestibulum eget nunc sed nibh consectetur ultrices. Etiam sed convallis metus, quis tincidunt ante. Sed auctor id erat ut bibendum. Aenean mollis, metus tempor rhoncus pharetra, dolor ex mattis tortor, ac commodo nisl massa in nulla. Pellentesque velit velit, aliquet sed ligula in, tincidunt laoreet nulla. Nullam enim nibh, rhoncus ut laoreet commodo, bibendum id libero. Maecenas consectetur varius arcu eget varius. Curabitur pharetra bibendum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-  ])
-
-  const addTwoot = (twoot) => {
-    setTwootabase([...twootabase, twoot]);
-  }
 
   return (
     <div className="App">
       <BrowserRouter>
         <nav>
-          <h1 className="title"><span>tweeeeetur. | <Link to="/">Home</Link> | <Link to="/about">About</Link></span></h1>
+          <h1 className="title"><span>tweeeeetur. | <Link to="/">Coke enjoyers</Link> | <Link to="/rtdb">Pepsi fans</Link> | <Link to="/lite">Lite</Link> | <Link to="/about">About</Link></span></h1>
         </nav>
         <Routes>
-          <Route path="/" element={ <Home twootabase = { twootabase } addTwootFunc={addTwoot} /> } />
+          <Route path="/" element={ <FirebaseHome /> } />
+          <Route path="/rtdb" element={ <RTDBHome /> } />
+          <Route path="/lite" element={ <Lite /> } />
           <Route path="/about" element={ <About /> } />
           <Route path="*" element={ <ErrorPage /> } /> 
         </Routes>

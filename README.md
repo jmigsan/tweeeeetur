@@ -3,7 +3,8 @@ microblogging website
 
 ## What I used
 
-React.js
-Firebase Firestore Database, Realtime Database, Authentication, Storage, Hosting
-Sass CSS
+React.js,
+Sass CSS,
 jQuery
+
+Firebase (Firestore Database, Realtime Database, Authentication, Storage, Hosting)
